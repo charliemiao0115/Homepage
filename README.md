@@ -1,8 +1,8 @@
-# Miao Yuchen · Personal Website
+# Charlie MIAO Yuchen · Personal Website
 
-Personal site for Miao Yuchen (Charlie), Algorithm Engineer (Computer Vision) at OMNIVISION.
+Personal site for Charlie MIAO Yuchen, Algorithm Engineer (Computer Vision) at OMNIVISION.
 
-Live at **https://charliemiao0115.github.io/Homepage/** once GitHub Pages is enabled (see below).
+Live at **https://charliemiao0115.github.io/Homepage/**
 
 ## Stack
 
@@ -13,7 +13,7 @@ index.html             page content
 404.html               not-found page
 assets/css/style.css   styles and scroll-driven motion
 assets/js/main.js      scroll engine, generated artwork, interactions
-assets/img/favicon.svg
+assets/img/            avatar, favicon, apple-touch-icon, og-image
 .github/workflows/deploy.yml   CI/CD
 ```
 
