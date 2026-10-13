@@ -366,30 +366,6 @@
     $$("main section[id]").forEach(function (s) { io.observe(s); });
   }
 
-  /* ---------------- Misc ---------------- */
-  function toast(msg) {
-    var t = $("#toast");
-    if (!t) return;
-    t.textContent = msg;
-    t.classList.add("is-shown");
-    clearTimeout(toast._t);
-    toast._t = setTimeout(function () { t.classList.remove("is-shown"); }, 2200);
-  }
-
-  function initCopy() {
-    var btn = $("#copy-email");
-    if (!btn) return;
-    btn.addEventListener("click", function () {
-      var email = btn.getAttribute("data-email");
-      var done = function () { toast("Email address copied"); };
-      if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(email).then(done, function () { window.location.href = "mailto:" + email; });
-      } else {
-        window.location.href = "mailto:" + email;
-      }
-    });
-  }
-
   /* ---------------- Boot ---------------- */
   buildChip();
   buildWords();
@@ -400,7 +376,6 @@
   initShowcase();
   initReveal();
   initNav();
-  initCopy();
   var year = $("#year");
   if (year) year.textContent = new Date().getFullYear();
 
