@@ -1,0 +1,70 @@
+name: CI/CD · GitHub Pages
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Validate site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate HTML
+        run: npx --yes html-validate@8 index.html 404.html
+
+      - name: Check JavaScript syntax
+        run: node --check assets/js/main.js
+
+      - name: Check local links and assets exist
+        run: |
+          missing=0
+          for f in index.html 404.html; do
+            for ref in $(grep -oE '(href|src)="[^"#:]+"' "$f" | sed -E 's/^(href|src)="//; s/"$//' | sort -u); do
+              [ "$ref" = "./" ] && continue
+              if [ ! -e "$ref" ]; then echo "::error file=$f::Missing local file: $ref"; missing=1; fi
+            done
+          done
+          exit $missing
+
+      - name: Assemble site
+        run: |
+          mkdir -p _site
+          cp -r index.html 404.html assets _site/
+          touch _site/.nojekyll
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: check
+    # Only publish from the default branch; other branches and PRs just get validated.
+    if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

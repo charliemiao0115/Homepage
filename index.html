@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Miao Yuchen · Computer Vision Engineer</title>
+  <meta name="description" content="Miao Yuchen (Charlie) is an Algorithm Engineer at OMNIVISION building ultra-low-power computer vision for embedded hardware, from model architecture to on-device NPU deployment.">
+  <meta name="author" content="Miao Yuchen">
+  <meta name="theme-color" content="#0d0d0f">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Miao Yuchen · Computer Vision Engineer">
+  <meta property="og:description" content="Computer vision small enough to live on a chip. Ultra-low-power deep learning, from model architecture to silicon.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/48792687?v=4">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Miao Yuchen",
+    "alternateName": "Charlie Miao",
+    "jobTitle": "Algorithm Engineer (Computer Vision)",
+    "worksFor": { "@type": "Organization", "name": "OMNIVISION" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Singapore" },
+    "alumniOf": ["National University of Singapore", "Northwestern Polytechnical University"],
+    "email": "mailto:charliemiao0115@gmail.com",
+    "sameAs": [
+      "https://github.com/charliemiao0115",
+      "https://www.linkedin.com/in/charliemiao/",
+      "https://scholar.google.com/citations?user=2xU3tiQAAAAJ&hl=en"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= NAV (floating capsule) ================= -->
+  <header class="nav" id="top">
+    <div class="nav__capsule">
+      <a class="nav__mark" href="#top" aria-label="Miao Yuchen, back to top">MY</a>
+      <nav class="nav__links" id="nav-links" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#pipeline">Process</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+        <a href="#education">Education</a>
+        <a class="nav__cta" href="#contact">Contact <span aria-hidden="true">→</span></a>
+      </nav>
+      <button class="nav__burger" id="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= HERO (pinned, scroll-driven) ================= -->
+    <section class="hero dark" data-scroll data-pin aria-labelledby="hero-title">
+      <div class="sticky">
+        <div class="hero__grid" aria-hidden="true"></div>
+
+        <div class="hero__intro">
+          <p class="kicker mono"><span class="dot"></span>Singapore — Algorithm Engineer, Computer Vision</p>
+          <h1 class="hero__title" id="hero-title">Miao Yuchen<span class="accent">.</span></h1>
+          <p class="hero__tag">I make computer vision small enough to live on a chip.</p>
+        </div>
+
+        <div class="hero__chip" aria-hidden="true">
+          <div class="hero__glow"></div>
+          <svg class="chip" viewBox="0 0 600 600">
+            <g id="chip-traces" class="chip__traces"></g>
+            <g id="chip-pins" class="chip__pins"></g>
+            <rect class="chip__pkg" x="160" y="160" width="280" height="280" rx="26"/>
+            <rect class="chip__die" x="196" y="196" width="208" height="208" rx="10"/>
+            <g id="chip-cores" class="chip__cores"></g>
+            <g class="chip__dims">
+              <path d="M160 470 H440 M160 462 V478 M440 462 V478"/>
+              <path d="M470 160 V440 M462 160 H478 M462 440 H478"/>
+            </g>
+          </svg>
+          <div class="chip__text"><span class="chip__label">NPU</span><span class="chip__sub mono">int8 · low-power</span></div>
+          <span class="chip__note chip__note--a mono">model → int8</span>
+          <span class="chip__note chip__note--b mono">post-proc → RISC-V</span>
+        </div>
+
+        <div class="hero__caption">
+          <h2>Vision that fits in <span class="accent">milliwatts.</span></h2>
+          <p>Deep learning models I design, compress and deploy onto embedded silicon.</p>
+        </div>
+
+        <div class="hero__hint mono" aria-hidden="true">scroll <span></span></div>
+      </div>
+    </section>
+
+    <!-- ================= OVERVIEW: word-by-word reveal ================= -->
+    <section class="words dark" id="overview" data-scroll data-pin aria-label="About">
+      <div class="sticky">
+        <p class="words__text" id="words">
+          I'm Charlie, a computer vision engineer at OMNIVISION in Singapore. I design neural networks,
+          compress them until they fit in milliwatts, and ship them onto NPUs and RISC-V cores,
+          from the first layer to the last decoded box.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= AT A GLANCE ================= -->
+    <section class="glance paper" aria-labelledby="glance-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="index mono">(01)</span>
+          <h2 class="section-title" id="glance-title">At a glance</h2>
+        </div>
+        <div class="glance__grid">
+          <div class="stat" data-reveal>
+            <span class="stat__value"><span data-count="4">4</span></span>
+            <span class="stat__label">on-device vision models delivered for OMNIVISION silicon</span>
+          </div>
+          <div class="stat" data-reveal style="--d: 0.08s">
+            <span class="stat__value"><span data-count="4.85" data-decimals="2">4.85</span></span>
+            <span class="stat__label">MSc GPA out of 5.0 at the National University of Singapore</span>
+          </div>
+          <div class="stat" data-reveal style="--d: 0.16s">
+            <span class="stat__value"><span data-count="36">36</span></span>
+            <span class="stat__label">citations on Google Scholar</span>
+          </div>
+          <div class="stat" data-reveal style="--d: 0.24s">
+            <span class="stat__value"><span data-count="2">2</span><span class="accent">+</span></span>
+            <span class="stat__label">years building embedded vision at OMNIVISION</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SELECTED WORK (sticky visual + steps) ================= -->
+    <section class="showcase dark" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="index mono">(02)</span>
+          <h2 class="section-title" id="work-title">Selected work at OMNIVISION</h2>
+        </div>
+        <p class="section-lead" data-reveal>Four perception models I built and shipped onto OMNIVISION silicon. Each one has a power, latency and memory budget it has to meet.</p>
+
+        <div class="showcase__body">
+          <div class="showcase__visual" aria-hidden="true">
+            <div class="viz-frame" id="viz-frame" data-active="0">
+              <div class="viz viz--face" id="viz-face"></div>
+              <div class="viz viz--hand" id="viz-hand"></div>
+              <div class="viz viz--qr" id="viz-qr"></div>
+              <div class="viz viz--person" id="viz-person"></div>
+              <div class="viz-hud mono">
+                <span class="viz-hud__rec"></span>
+                <span id="viz-hud-label">dms · 68 landmarks</span>
+                <span class="viz-hud__right">OAX4600 · NPU</span>
+              </div>
+              <ol class="viz-steps" aria-hidden="true"><li></li><li></li><li></li><li></li></ol>
+            </div>
+          </div>
+
+          <div class="showcase__steps">
+            <article class="step" data-step="0">
+              <span class="step__tag mono">01 / Driver monitoring</span>
+              <h3>Driver Monitoring System</h3>
+              <p>An ultra-low-power facial landmark model for a production-grade driver monitoring system. I used aggressive quantisation and pruning to meet strict power, latency and memory limits, and kept it accurate across diverse lighting and head poses.</p>
+              <p class="step__product"><span class="mono">Platform</span> <a href="https://www.ovt.com/wp-content/uploads/2023/12/OAX4600-PB-v1.1-WEB.pdf" target="_blank" rel="noopener">OMNIVISION OAX4600 ↗</a>: an AI-enabled ASIC for driver and occupant monitoring that pairs an RGB-IR ISP with a dedicated 2 TOPS NPU.</p>
+            </article>
+            <article class="step" data-step="1">
+              <span class="step__tag mono">02 / Gesture</span>
+              <h3>Hand Gesture Recognition</h3>
+              <p>A gesture recognition model built for embedded deployment. It recognises gestures reliably in real time within tight compute and memory budgets.</p>
+              <p class="step__product"><span class="mono">Platform</span> <strong>OMNIVISION OG12B10</strong>: a 12 MP image sensor with an NPU attached directly to the sensor, so vision models run right where pixels are captured.</p>
+            </article>
+            <article class="step" data-step="2">
+              <span class="step__tag mono">03 / Barcode &amp; QR</span>
+              <h3>Barcode &amp; QR Detection</h3>
+              <p>A custom lightweight CNN detector designed for fixed-point quantisation and hardware post-processing. It detects reliably at ultra-low power, with detection decoding I wrote in C on RISC-V.</p>
+              <p class="step__product"><span class="mono">Platform</span> <strong>OMNIVISION OG12B10</strong>, running on the NPU attached to the sensor.</p>
+            </article>
+            <article class="step" data-step="3">
+              <span class="step__tag mono">04 / Person detection</span>
+              <h3>Person Detection</h3>
+              <p>An always-on person detection model for vehicle security, small enough to keep watching while the rest of the car sleeps.</p>
+              <p class="step__product"><span class="mono">Platform</span> <a href="https://www.businesswire.com/news/home/20260921811649/en/OMNIVISION-Introduces-Lowest-Power-OAX7700-AI-Companion-Processor-for-Always-On-Vehicle-Security-Systems" target="_blank" rel="noopener">OMNIVISION OAX7700 ↗</a>: an ultra-low-power AI companion processor with an integrated NPU for always-on parking surveillance.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROCESS (pinned horizontal scroll) ================= -->
+    <section class="hscroll paper" id="pipeline" data-scroll data-pin data-hscroll aria-labelledby="pipeline-title">
+      <div class="sticky">
+        <div class="container hscroll__head">
+          <div class="section-head">
+            <span class="index mono">(03)</span>
+            <h2 class="section-title" id="pipeline-title">How a model reaches silicon</h2>
+          </div>
+          <span class="hscroll__count mono" aria-hidden="true">scroll →</span>
+        </div>
+        <div class="hscroll__viewport">
+          <ol class="hscroll__track" id="hscroll-track">
+            <li class="hcard">
+              <span class="hcard__n mono">01</span>
+              <div class="hcard__icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="8.5" y="14" width="7" height="7" rx="1.5"/><path d="M6.5 10v2h11v-2M12 12v2"/></svg></div>
+              <h3>Architect</h3>
+              <p>Custom lightweight CNNs, designed around the compute, memory and power budget of the target hardware.</p>
+            </li>
+            <li class="hcard">
+              <span class="hcard__n mono">02</span>
+              <div class="hcard__icon"><svg viewBox="0 0 24 24"><path d="M3 20h18M6 16l4-5 3 3 5-7"/><circle cx="18" cy="7" r="1.5"/></svg></div>
+              <h3>Train</h3>
+              <p>PyTorch and JAX/Flax, made robust to diverse lighting, head poses and real-world noise.</p>
+            </li>
+            <li class="hcard">
+              <span class="hcard__n mono">03</span>
+              <div class="hcard__icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 9h16M4 14h16M9 4v16M14 4v16"/></svg></div>
+              <h3>Compress</h3>
+              <p>Aggressive fixed-point quantisation and pruning that keep the accuracy.</p>
+            </li>
+            <li class="hcard">
+              <span class="hcard__n mono">04</span>
+              <div class="hcard__icon"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></div>
+              <h3>Convert</h3>
+              <p>I own model conversion to the hardware format, working with the ASIC team on OMNIVISION's latest NPU and its CNN post-processing hardware.</p>
+            </li>
+            <li class="hcard">
+              <span class="hcard__n mono">05</span>
+              <div class="hcard__icon"><svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></div>
+              <h3>Post-process</h3>
+              <p>Detection decoding written in C on a RISC-V processor, joining inference and output decoding into one on-device system.</p>
+            </li>
+            <li class="hcard hcard--accent">
+              <span class="hcard__n mono">06</span>
+              <div class="hcard__icon"><svg viewBox="0 0 24 24"><path d="M3 8V5a2 2 0 0 1 2-2h3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M8 21H5a2 2 0 0 1-2-2v-3"/><circle cx="12" cy="12" r="3"/></svg></div>
+              <h3>Ship</h3>
+              <p>Real-time, production-grade perception running at ultra-low power, on device.</p>
+            </li>
+          </ol>
+        </div>
+        <div class="container"><div class="hscroll__bar"><span></span></div></div>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="experience dark" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="index mono">(04)</span>
+          <h2 class="section-title" id="experience-title">Experience</h2>
+        </div>
+
+        <article class="role-feature" data-reveal>
+          <div class="role-feature__head">
+            <div>
+              <p class="mono muted">01/2025 — Present · Singapore</p>
+              <h3>Algorithm Engineer, Computer Vision</h3>
+              <p class="role-feature__org">OMNIVISION · Software Platform</p>
+            </div>
+            <p class="role-feature__text">I build ultra-low-power deep learning systems for embedded hardware, end to end: from model architecture to NPU conversion to RISC-V post-processing.</p>
+          </div>
+          <ul class="cells">
+            <li class="cell"><span class="cell__n mono">a</span><h4>Driver monitoring</h4><p>Facial landmarks across lighting conditions and head poses.</p><span class="tag mono">OAX4600</span></li>
+            <li class="cell"><span class="cell__n mono">b</span><h4>Gesture recognition</h4><p>Reliable real-time recognition on a tight budget.</p><span class="tag mono">OG12B10</span></li>
+            <li class="cell"><span class="cell__n mono">c</span><h4>Barcode &amp; QR</h4><p>A custom CNN detector built for fixed-point quantisation.</p><span class="tag mono">OG12B10</span></li>
+            <li class="cell"><span class="cell__n mono">d</span><h4>Person detection</h4><p>Always-on detection for vehicle security at ultra-low power.</p><span class="tag mono">OAX7700</span></li>
+            <li class="cell"><span class="cell__n mono">e</span><h4>NPU delivery</h4><p>Model conversion for OMNIVISION's latest NPU, built with the ASIC team.</p><span class="tag mono">Toolchain</span></li>
+            <li class="cell"><span class="cell__n mono">f</span><h4>RISC-V post-processing</h4><p>Detection decoding in C for a complete on-device detection system.</p><span class="tag mono">C · RISC-V</span></li>
+          </ul>
+        </article>
+
+        <ul class="roles">
+          <li class="role" data-reveal>
+            <span class="role__date mono">05/2024 — 12/2024</span>
+            <div>
+              <h4>Algorithm Engineer Intern, Computer Vision</h4>
+              <p class="role__org">OMNIVISION · Software Platform · Singapore</p>
+              <p>Developed computer vision and deep learning algorithms for ultra-low-power infrared cameras, including parameter tuning and quantisation. Built a multi-feature demo application for the team.</p>
+            </div>
+          </li>
+          <li class="role" data-reveal>
+            <span class="role__date mono">05/2023 — 07/2023</span>
+            <div>
+              <h4>NDT Intern</h4>
+              <p class="role__org">AIRBUS Tianjin · QAT17 · China</p>
+              <p>Digitalised work processes with Google Workspace, built an internal website, and learned the procedures of Eddy Current and Ultrasonic Testing.</p>
+            </div>
+          </li>
+          <li class="role" data-reveal>
+            <span class="role__date mono">07/2022 — 08/2022</span>
+            <div>
+              <h4>Hardware Engineer Intern</h4>
+              <p class="role__org">Tianjin EMBDTEC Science &amp; Technology · China</p>
+              <p>Designed circuit boards, wrote VHDL to control FPGAs, tested boards under extreme temperatures, and resolved FPGA–DSP communication issues caused by timing errors.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="projects paper" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="index mono">(05)</span>
+          <h2 class="section-title" id="projects-title">Projects</h2>
+        </div>
+        <div class="projects__grid">
+          <article class="pcard" data-reveal>
+            <div class="pcard__art pcard__art--slam" aria-hidden="true">
+              <svg viewBox="0 0 200 110"><path class="trail" pathLength="100" d="M10 90 C 40 60, 70 95, 100 55 S 160 30, 190 20"/><g class="pts"><circle cx="30" cy="30" r="2.2"/><circle cx="60" cy="20" r="2.2"/><circle cx="85" cy="35" r="2.2"/><circle cx="130" cy="75" r="2.2"/><circle cx="150" cy="60" r="2.2"/><circle cx="170" cy="85" r="2.2"/><circle cx="45" cy="70" r="2.2"/><circle cx="115" cy="25" r="2.2"/></g><circle class="cam" cx="190" cy="20" r="4.5"/></svg>
+            </div>
+            <div class="pcard__body">
+              <span class="pcard__date mono">08/2022 — 04/2023</span>
+              <h3>IMU-aided Indoor Visual SLAM</h3>
+              <p class="pcard__org">NUS (Chongqing) Research Institute</p>
+              <p>A visual-inertial SLAM system that fuses IMU measurements with camera tracking and object detection, for robust localisation in dynamic indoor scenes. Published as <em>ORB-YOLO</em>.</p>
+            </div>
+          </article>
+          <article class="pcard" data-reveal style="--d: 0.08s">
+            <div class="pcard__art pcard__art--med" aria-hidden="true">
+              <svg viewBox="0 0 200 110"><path class="ecg" pathLength="100" d="M0 60 H55 L65 40 L75 85 L88 20 L100 75 L108 60 H200"/></svg>
+            </div>
+            <div class="pcard__body">
+              <span class="pcard__date mono">08/2022 — 03/2023</span>
+              <h3>Portable Medical Detector</h3>
+              <p class="pcard__org">Team Leader · CUHK (Shenzhen)</p>
+              <p>Led a team building a portable, smartphone-friendly medical detection device, combining hardware design with optical signal processing.</p>
+            </div>
+          </article>
+          <article class="pcard" data-reveal style="--d: 0.16s">
+            <div class="pcard__art pcard__art--nvs" aria-hidden="true">
+              <svg viewBox="0 0 200 110"><g class="rays"><path d="M20 20 L100 55"/><path d="M20 90 L100 55"/><path d="M180 20 L100 55"/><path d="M180 90 L100 55"/><path d="M100 5 L100 55"/></g><rect class="obj" x="85" y="40" width="30" height="30" rx="4"/><g class="cams"><rect x="14" y="14" width="12" height="12" rx="2"/><rect x="14" y="84" width="12" height="12" rx="2"/><rect x="174" y="14" width="12" height="12" rx="2"/><rect x="174" y="84" width="12" height="12" rx="2"/><rect x="94" y="0" width="12" height="10" rx="2"/></g></svg>
+            </div>
+            <div class="pcard__body">
+              <span class="pcard__date mono">05/2021 — 05/2023</span>
+              <h3>Novel View Synthesis for Free-Viewpoint Video</h3>
+              <p class="pcard__org">Team Leader · NWPU</p>
+              <p>Led a two-year research project on synthesising unseen viewpoints from multi-camera captures for free-viewpoint video.</p>
+            </div>
+          </article>
+        </div>
+        <p class="more" data-reveal><a class="arrow-link" href="https://github.com/charliemiao0115" target="_blank" rel="noopener">More on GitHub <span aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <!-- ================= RESEARCH ================= -->
+    <section class="research paper" id="research" aria-labelledby="research-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="index mono">(06)</span>
+          <h2 class="section-title" id="research-title">Publications</h2>
+        </div>
+
+        <div class="metrics" data-reveal>
+          <div class="metric"><span class="metric__num" data-count="36">36</span><span class="metric__label mono">citations</span></div>
+          <div class="metric"><span class="metric__num" data-count="2">2</span><span class="metric__label mono">h-index</span></div>
+          <div class="metric"><span class="metric__num" data-count="1">1</span><span class="metric__label mono">i10-index</span></div>
+        </div>
+
+        <!-- To add a paper, copy one <li class="pub"> block. Citation counts come from Google Scholar. -->
+        <ol class="pubs">
+          <li class="pub" data-reveal>
+            <div class="pub__meta mono"><span>2023</span><span>Journal · Review</span><span class="pub__cites">27 citations</span></div>
+            <h3><a href="https://doi.org/10.1002/aisy.202200285" target="_blank" rel="noopener">Engineering Strategies for Advancing Optical Signal Outputs in Smartphone-Enabled Point-of-Care Diagnostics</a></h3>
+            <p class="pub__authors">K. Fan, W. Liu, <strong>Y. Miao</strong>, Z. Li, G. Liu</p>
+            <p class="pub__venue"><em>Advanced Intelligent Systems</em>, 5(6), 2200285 · Open access</p>
+          </li>
+          <li class="pub" data-reveal>
+            <div class="pub__meta mono"><span>2023</span><span>Conference</span><span class="pub__cites">9 citations</span></div>
+            <h3><a href="https://scholar.google.com/scholar?q=%22ORB-YOLO%3A+an+indoor+IMU-aided+visual-inertial+SLAM+system+for+dynamic+environment%22" target="_blank" rel="noopener">ORB-YOLO: An Indoor IMU-aided Visual-Inertial SLAM System for Dynamic Environment</a></h3>
+            <p class="pub__authors">X. Wu, <strong>Y. Miao</strong>, Z. Sun</p>
+            <p class="pub__venue">International Conference on Artificial Intelligence of Things, 2023</p>
+          </li>
+        </ol>
+        <p class="more more--left" data-reveal><a class="arrow-link" href="https://scholar.google.com/citations?user=2xU3tiQAAAAJ&amp;hl=en" target="_blank" rel="noopener">Full profile on Google Scholar <span aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section class="education dark" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="index mono">(07)</span>
+          <h2 class="section-title" id="education-title">Education</h2>
+        </div>
+        <div class="edu">
+          <article class="edu__card" data-reveal>
+            <div class="ring" style="--v: 0.97">
+              <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring__bg" cx="60" cy="60" r="52"/><circle class="ring__fg" cx="60" cy="60" r="52" pathLength="100"/></svg>
+              <div class="ring__label"><strong>4.85</strong><span class="mono">/ 5.0</span></div>
+            </div>
+            <div>
+              <p class="mono muted">08/2023 — 01/2025</p>
+              <h3>National University of Singapore</h3>
+              <p class="muted">Master of Science in Computer Engineering</p>
+            </div>
+          </article>
+          <article class="edu__card" data-reveal style="--d: 0.1s">
+            <div class="ring" style="--v: 0.92">
+              <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring__bg" cx="60" cy="60" r="52"/><circle class="ring__fg" cx="60" cy="60" r="52" pathLength="100"/></svg>
+              <div class="ring__label"><strong>3.68</strong><span class="mono">/ 4.0</span></div>
+            </div>
+            <div>
+              <p class="mono muted">09/2019 — 07/2023</p>
+              <h3>Northwestern Polytechnical University</h3>
+              <p class="muted">B.Eng. in Electronics and Information Engineering, Honours College</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="skills dark" id="skills" data-scroll aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="index mono">(08)</span>
+          <h2 class="section-title" id="skills-title">Toolbox</h2>
+        </div>
+        <div class="skills__grid">
+          <div class="skill" data-reveal><h3>ML &amp; Deep Learning</h3><p>PyTorch · JAX/Flax · Quantisation &amp; Pruning · NPU Model Conversion · AI Agents</p></div>
+          <div class="skill" data-reveal style="--d: 0.06s"><h3>Programming</h3><p>Python · C/C++ · Bash · MATLAB</p></div>
+          <div class="skill" data-reveal style="--d: 0.12s"><h3>Embedded &amp; Robotics</h3><p>RISC-V · Hardware–Software Co-design · ROS · VHDL / FPGA</p></div>
+          <div class="skill" data-reveal style="--d: 0.18s"><h3>Hardware &amp; CAD</h3><p>Cadence · Altium Designer · AutoCAD · Shapr 3D</p></div>
+          <div class="skill" data-reveal style="--d: 0.24s"><h3>Languages</h3><p>English · Mandarin Chinese</p></div>
+        </div>
+      </div>
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__row ticker__row--a">PyTorch / JAX / INT8 / Pruning / NPU / RISC-V / C++ / ROS / FPGA / SLAM / PyTorch / JAX / INT8 / Pruning /</div>
+        <div class="ticker__row ticker__row--b">Computer Vision / Embedded AI / Quantisation / Co-design / Computer Vision / Embedded AI /</div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="contact dark" id="contact" data-scroll aria-labelledby="contact-title">
+      <div class="container contact__inner">
+        <div class="section-head" data-reveal>
+          <span class="index mono">(09)</span>
+          <h2 class="section-title" id="contact-title">Let's talk</h2>
+        </div>
+        <div class="contact__body">
+          <a class="contact__mail" href="mailto:charliemiao0115@gmail.com">charliemiao0115@gmail.com</a>
+          <p class="contact__lead">Embedded vision, efficient models, or a good conversation about NPUs. My inbox is open.</p>
+          <div class="contact__actions">
+            <a class="btn" href="mailto:charliemiao0115@gmail.com">Send an email <span aria-hidden="true">→</span></a>
+            <button class="btn btn--line" type="button" id="copy-email" data-email="charliemiao0115@gmail.com">Copy address</button>
+          </div>
+          <ul class="contact__links">
+            <li><a class="arrow-link" href="https://www.linkedin.com/in/charliemiao/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a></li>
+            <li><a class="arrow-link" href="https://github.com/charliemiao0115" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></li>
+            <li><a class="arrow-link" href="https://scholar.google.com/citations?user=2xU3tiQAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar <span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </div>
+        <img class="contact__avatar" src="https://avatars.githubusercontent.com/u/48792687?v=4" alt="Portrait of Miao Yuchen" width="120" height="120" loading="lazy">
+      </div>
+      <p class="contact__giant" aria-hidden="true">Miao Yuchen</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__row">
+      <p class="mono">© <span id="year">2026</span> Miao Yuchen · Singapore</p>
+      <p class="mono">Hand-built · deployed with GitHub Actions</p>
+      <a class="mono" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <div class="toast mono" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
