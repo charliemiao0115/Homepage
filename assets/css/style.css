@@ -257,7 +257,7 @@ button { font: inherit; }
   background-size: 32px 32px;
 }
 .viz {
-  position: absolute; inset: 0; display: grid; place-items: center; padding: 56px 32px 64px;
+  position: absolute; inset: 0; display: block; padding: 56px 32px 64px;
   opacity: 0; transform: translateY(24px) scale(0.98);
   transition: opacity 0.7s var(--ease), transform 0.8s var(--ease);
 }
@@ -529,9 +529,16 @@ button { font: inherit; }
   .nav__links .nav__cta { margin: 6px 0 0; text-align: center; }
 
   .showcase__body { grid-template-columns: 1fr; gap: 0; }
-  .showcase__visual { position: sticky; top: 72px; z-index: 2; height: 50vh; padding-bottom: 12px; background: linear-gradient(var(--night) 88%, transparent); }
-  .viz-frame { position: relative; top: 0; height: 100%; }
-  .step { min-height: 72vh; justify-content: flex-start; padding-top: 6vh; }
+  .showcase__visual {
+    position: sticky; top: 66px; z-index: 2; padding-bottom: 14px;
+    height: calc(min(32vh, 260px) + 14px); height: calc(min(32svh, 260px) + 14px);
+    background: linear-gradient(var(--night) 85%, transparent);
+    box-shadow: 0 -66px 0 var(--night); /* hide text scrolling under the nav */
+  }
+  .viz-frame { position: relative; top: 0; height: 100%; border-radius: 16px; }
+  .viz { padding: 24px 16px 36px; }
+  .viz-steps { top: 10px; right: 12px; }
+  .step { min-height: 58vh; min-height: 58svh; justify-content: flex-start; padding-top: 4vh; }
 
   .role-feature__head { grid-template-columns: 1fr; }
   .edu { grid-template-columns: 1fr; }
@@ -553,7 +560,10 @@ button { font: inherit; }
   .footer__row { flex-direction: column; align-items: flex-start; }
   .hero { height: 280vh; }
   .hscroll__count { display: none; }
-  .viz-hud { font-size: 11px; padding: 12px 14px; }
+  .viz-hud { font-size: 10.5px; padding: 8px 12px; }
+  .viz .v-label { display: none; }
+  .viz svg { transform: scale(1.18); } /* labels are hidden, so let the drawing fill the frame */
+  .step h3 { font-size: 28px; margin-bottom: 14px; }
   .viz-hud__right { display: none; }
   .chip__note { display: none; }
 }

@@ -257,7 +257,7 @@
       entries.forEach(function (e) {
         if (e.isIntersecting) activate(Number(e.target.getAttribute("data-step")));
       });
-    }, { rootMargin: mobile ? "-62% 0px -30% 0px" : "-48% 0px -48% 0px" });
+    }, { rootMargin: mobile ? "-55% 0px -35% 0px" : "-48% 0px -48% 0px" });
     steps.forEach(function (s) { io.observe(s); });
   }
 
