@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Charlie MIAO Yuchen · Computer Vision Engineer</title>
-  <meta name="description" content="Charlie MIAO Yuchen is an Algorithm Engineer at OMNIVISION building ultra-low-power computer vision for embedded hardware, from model architecture to on-device NPU deployment.">
+  <meta name="description" content="Charlie MIAO Yuchen is an Algorithm Engineer at OmniVision Technologies, Inc., building ultra-low-power computer vision for embedded hardware, from model architecture to on-device NPU deployment.">
   <meta name="author" content="Charlie MIAO Yuchen">
   <meta name="theme-color" content="#0d0d0f">
   <meta property="og:type" content="website">
@@ -28,7 +28,7 @@
     "alternateName": ["Charlie Miao", "Miao Yuchen"],
     "image": "https://charliemiao0115.github.io/Homepage/assets/img/og-image.jpg",
     "jobTitle": "Algorithm Engineer (Computer Vision)",
-    "worksFor": { "@type": "Organization", "name": "OMNIVISION" },
+    "worksFor": { "@type": "Organization", "name": "OmniVision Technologies, Inc." },
     "address": { "@type": "PostalAddress", "addressLocality": "Singapore" },
     "alumniOf": ["National University of Singapore", "Northwestern Polytechnical University"],
     "sameAs": [
@@ -87,7 +87,7 @@
               <path d="M470 160 V440 M462 160 H478 M462 440 H478"/>
             </g>
           </svg>
-          <div class="chip__text"><span class="chip__label">NPU</span><span class="chip__sub mono">int8 · low-power</span></div>
+          <div class="chip__text"><span class="chip__label">NPU</span><span class="chip__sub mono"><span class="chip__int8">int8</span><span>low-power</span></span></div>
           <span class="chip__note chip__note--a mono">model → int8</span>
           <span class="chip__note chip__note--b mono">post-proc → RISC-V</span>
         </div>
@@ -105,7 +105,7 @@
     <section class="words dark" id="overview" data-scroll data-pin aria-label="About">
       <div class="sticky">
         <p class="words__text" id="words">
-          I'm Charlie, a computer vision engineer at OMNIVISION in Singapore. I design neural networks,
+          I'm Charlie, a computer vision engineer at OmniVision in Singapore. I design neural networks,
           compress them until they fit in milliwatts, and ship them onto NPUs and RISC-V cores,
           from the first layer to the last decoded box.
         </p>
@@ -122,7 +122,7 @@
         <div class="glance__grid">
           <div class="stat" data-reveal>
             <span class="stat__value"><span data-count="4">4</span></span>
-            <span class="stat__label">on-device vision models delivered for OMNIVISION silicon</span>
+            <span class="stat__label">on-device vision models delivered for OmniVision silicon</span>
           </div>
           <div class="stat" data-reveal style="--d: 0.08s">
             <span class="stat__value"><span data-count="4.85" data-decimals="2">4.85</span></span>
@@ -134,7 +134,7 @@
           </div>
           <div class="stat" data-reveal style="--d: 0.24s">
             <span class="stat__value"><span data-count="2">2</span><span class="accent">+</span></span>
-            <span class="stat__label">years building embedded vision at OMNIVISION</span>
+            <span class="stat__label">years building embedded vision at OmniVision</span>
           </div>
         </div>
       </div>
@@ -145,9 +145,9 @@
       <div class="container">
         <div class="section-head" data-reveal>
           <span class="index mono">(02)</span>
-          <h2 class="section-title" id="work-title">Selected work at OMNIVISION</h2>
+          <h2 class="section-title" id="work-title">Selected work at OmniVision</h2>
         </div>
-        <p class="section-lead" data-reveal>Four perception models I built and shipped onto OMNIVISION silicon. Each one has a power, latency and memory budget it has to meet.</p>
+        <p class="section-lead" data-reveal>Four perception models I built and shipped onto OmniVision silicon. Each one has a power, latency and memory budget it has to meet.</p>
 
         <div class="showcase__body">
           <div class="showcase__visual" aria-hidden="true">
@@ -170,25 +170,25 @@
               <span class="step__tag mono">01 / Driver monitoring</span>
               <h3>Driver Monitoring System</h3>
               <p>An ultra-low-power facial landmark model for a production-grade driver monitoring system. I used aggressive quantisation and pruning to meet strict power, latency and memory limits, and kept it accurate across diverse lighting and head poses.</p>
-              <p class="step__product"><span class="mono">Platform</span> <a href="https://www.ovt.com/wp-content/uploads/2023/12/OAX4600-PB-v1.1-WEB.pdf" target="_blank" rel="noopener">OMNIVISION OAX4600 ↗</a>: an AI-enabled ASIC for driver and occupant monitoring that pairs an RGB-IR ISP with a dedicated 2 TOPS NPU.</p>
+              <p class="step__product"><span class="mono">Platform</span> <a href="https://www.ovt.com/wp-content/uploads/2023/12/OAX4600-PB-v1.1-WEB.pdf" target="_blank" rel="noopener">OmniVision OAX4600 ↗</a>: an AI-enabled ASIC for driver and occupant monitoring that pairs an RGB-IR ISP with a dedicated 2 TOPS NPU.</p>
             </article>
             <article class="step" data-step="1">
               <span class="step__tag mono">02 / Gesture</span>
               <h3>Hand Gesture Recognition</h3>
               <p>A gesture recognition model built for embedded deployment. It recognises gestures reliably in real time within tight compute and memory budgets.</p>
-              <p class="step__product"><span class="mono">Platform</span> <strong>OMNIVISION OG12B10</strong>: a 12 MP image sensor with an NPU attached directly to the sensor, so vision models run right where pixels are captured.</p>
+              <p class="step__product"><span class="mono">Platform</span> <strong>OmniVision OG12B10</strong>: a 12 MP image sensor with an NPU attached directly to the sensor, so vision models run right where pixels are captured.</p>
             </article>
             <article class="step" data-step="2">
               <span class="step__tag mono">03 / Barcode &amp; QR</span>
               <h3>Barcode &amp; QR Detection</h3>
               <p>A custom lightweight CNN detector designed for fixed-point quantisation and hardware post-processing. It detects reliably at ultra-low power, with detection decoding I wrote in C on RISC-V.</p>
-              <p class="step__product"><span class="mono">Platform</span> <strong>OMNIVISION OG12B10</strong>, running on the NPU attached to the sensor.</p>
+              <p class="step__product"><span class="mono">Platform</span> <strong>OmniVision OG12B10</strong>, running on the NPU attached to the sensor.</p>
             </article>
             <article class="step" data-step="3">
               <span class="step__tag mono">04 / Person detection</span>
               <h3>Person Detection</h3>
               <p>An always-on person detection model for vehicle security, small enough to keep watching while the rest of the car sleeps.</p>
-              <p class="step__product"><span class="mono">Platform</span> <a href="https://www.businesswire.com/news/home/20260921811649/en/OMNIVISION-Introduces-Lowest-Power-OAX7700-AI-Companion-Processor-for-Always-On-Vehicle-Security-Systems" target="_blank" rel="noopener">OMNIVISION OAX7700 ↗</a>: an ultra-low-power AI companion processor with an integrated NPU for always-on parking surveillance.</p>
+              <p class="step__product"><span class="mono">Platform</span> <a href="https://www.businesswire.com/news/home/20260921811649/en/OMNIVISION-Introduces-Lowest-Power-OAX7700-AI-Companion-Processor-for-Always-On-Vehicle-Security-Systems" target="_blank" rel="noopener">OmniVision OAX7700 ↗</a>: an ultra-low-power AI companion processor with an integrated NPU for always-on parking surveillance.</p>
             </article>
           </div>
         </div>
@@ -229,7 +229,7 @@
               <span class="hcard__n mono">04</span>
               <div class="hcard__icon"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></div>
               <h3>Convert</h3>
-              <p>I own model conversion to the hardware format, working with the ASIC team on OMNIVISION's latest NPU and its CNN post-processing hardware.</p>
+              <p>I own model conversion to the hardware format, working with the ASIC team on OmniVision's latest NPU and its CNN post-processing hardware.</p>
             </li>
             <li class="hcard">
               <span class="hcard__n mono">05</span>
@@ -262,7 +262,7 @@
             <div>
               <p class="mono muted">01/2025 — Present · Singapore</p>
               <h3>Algorithm Engineer, Computer Vision</h3>
-              <p class="role-feature__org">OMNIVISION · Software Platform</p>
+              <p class="role-feature__org">OmniVision Technologies, Inc. · Software Platform</p>
             </div>
             <p class="role-feature__text">I build ultra-low-power deep learning systems for embedded hardware, end to end: from model architecture to NPU conversion to RISC-V post-processing.</p>
           </div>
@@ -271,7 +271,7 @@
             <li class="cell"><span class="cell__n mono">b</span><h4>Gesture recognition</h4><p>Reliable real-time recognition on a tight budget.</p><span class="tag mono">OG12B10</span></li>
             <li class="cell"><span class="cell__n mono">c</span><h4>Barcode &amp; QR</h4><p>A custom CNN detector built for fixed-point quantisation.</p><span class="tag mono">OG12B10</span></li>
             <li class="cell"><span class="cell__n mono">d</span><h4>Person detection</h4><p>Always-on detection for vehicle security at ultra-low power.</p><span class="tag mono">OAX7700</span></li>
-            <li class="cell"><span class="cell__n mono">e</span><h4>NPU delivery</h4><p>Model conversion for OMNIVISION's latest NPU, built with the ASIC team.</p><span class="tag mono">Toolchain</span></li>
+            <li class="cell"><span class="cell__n mono">e</span><h4>NPU delivery</h4><p>Model conversion for OmniVision's latest NPU, built with the ASIC team.</p><span class="tag mono">Toolchain</span></li>
             <li class="cell"><span class="cell__n mono">f</span><h4>RISC-V post-processing</h4><p>Detection decoding in C for a complete on-device detection system.</p><span class="tag mono">C · RISC-V</span></li>
           </ul>
         </article>
@@ -281,7 +281,7 @@
             <span class="role__date mono">05/2024 — 12/2024</span>
             <div>
               <h4>Algorithm Engineer Intern, Computer Vision</h4>
-              <p class="role__org">OMNIVISION · Software Platform · Singapore</p>
+              <p class="role__org">OmniVision Technologies, Inc. · Software Platform · Singapore</p>
               <p>Developed computer vision and deep learning algorithms for ultra-low-power infrared cameras, including parameter tuning and quantisation. Built a multi-feature demo application for the team.</p>
             </div>
           </li>

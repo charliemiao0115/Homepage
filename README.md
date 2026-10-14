@@ -1,6 +1,6 @@
 # Charlie MIAO Yuchen · Personal Website
 
-Personal site for Charlie MIAO Yuchen, Algorithm Engineer (Computer Vision) at OMNIVISION.
+Personal site for Charlie MIAO Yuchen, Algorithm Engineer (Computer Vision) at OmniVision Technologies, Inc.
 
 Live at **https://charliemiao0115.github.io/Homepage/**
 
